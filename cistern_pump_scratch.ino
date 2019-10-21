@@ -33,11 +33,11 @@ void loop() {
   // Logic for activating relay relative to cistern curent capacity
   // if the current water level's distance is greater than the fill line, activate relay
   if (cm > Fill_Line){
-    digitalWrite(Relay_Trig_Pin, HIGH);
+    digitalWrite(Relay_Trig_Pin, LOW);
   }
   // else turn off relay
   else (){              
-    digitalWrite(Relay_Trig_Pin, LOW);
+    digitalWrite(Relay_Trig_Pin, HIGH);
   }
 
   // Delay 10 seconds
