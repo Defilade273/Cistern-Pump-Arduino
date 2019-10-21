@@ -2,9 +2,9 @@ void setup() {
 
 // Declaring Variables
   int Fill_Line = 9;        // Fixed variable relative to my setup
-  int Ultra_Trig_Pin = 1;   // Ultrasonic Sensor trigger pin
-  int Ultra_Echo_Pin = 2;   // Ultrasonic Sensor echo pin
-  int Relay_Trig_Pin = 3;   // Relay trigger pin
+  int Ultra_Trig_Pin = 2;   // Ultrasonic Sensor trigger pin
+  int Ultra_Echo_Pin = 6;   // Ultrasonic Sensor echo pin
+  int Relay_Trig_Pin = 10;   // Relay trigger pin
   long duration, cm;
 
 // Setting pin modes
