@@ -19,16 +19,16 @@ void loop() {
 
   while (1){
   // Clears the trigger pin of the Ultrasonic Sensor
-  digitalWrite(2, LOW);
+  digitalWrite(Ultra_Trig_Pin, LOW);
   delayMicroseconds(10);
 
   // Sets the trigger pin on HIGH state for 10 micro seconds
-  digitalWrite(2, HIGH);
+  digitalWrite(Ultra_Trig_Pin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(2, LOW);
+  digitalWrite(Ultra_Trig_Pin, LOW);
 
   // Reads the Echo pin, stores to long duration
-  long duration = pulseIn(6, HIGH);
+  long duration = pulseIn(Ultra_Echo_Pin, HIGH);
 
   // Calculation to turn duration into cm
   long cm = (duration/2) / 29.1;
@@ -36,11 +36,11 @@ void loop() {
   // Logic for activating relay relative to cistern curent capacity
   // if the current water level's distance is greater than the fill line, activate relay
   if (cm > Fill_Line){
-    digitalWrite(10, LOW);
+    digitalWrite(Relay_Trig_Pin, LOW);
   }
   // else turn off relay
   else{              
-    digitalWrite(10, HIGH);
+    digitalWrite(Relay_Trig_Pin, HIGH);
   }
 
   // Delay 10 seconds
